@@ -60,7 +60,7 @@ const tokenomicsChart = new Chart(ctx, {
         '#D8BFD8'
       ],
       borderColor: '#1c0030',
-      borderWidth: 4,
+      borderWidth: 10,
       hoverOffset: 15
     }]
   },
