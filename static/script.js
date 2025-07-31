@@ -79,6 +79,24 @@ const tokenomicsChart = new Chart(ctx, {
   }
 });
 
+const config = {
+    type: 'doughnut',
+    data: data,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false, // 🔥 التحكم بالحجم
+        cutout: '65%',
+        layout: {
+            padding: 20 // 🔥 يضيف مساحة حول الدائرة
+        },
+        elements: {
+            arc: {
+                borderWidth: 15 // 🔥 عرض الحدود
+            }
+        }
+    },
+};
+
 // 🔥 تحديد تاريخ الفتح (بعد أسبوعين من 15 أغسطس)
 const unlockDate = new Date("August 29, 2025 00:00:00").getTime();
 const claimBtn = document.getElementById("claimButton");
