@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SnoozerCoin</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- 💤 أيقونة النوم -->
- <!-- <div class="sleep-icon">💤</div>-->
-
-  <!-- 🟣 قسم الكوالا والعد التنازلي -->
+  <!-- 🟣 قسم الهيرو -->
   <section class="hero">
     <img src="{{ url_for('static', filename='images/koala-sleep.png') }}" 
-         alt="Yawning Koala" 
-         class="yawning-koala" />
+         class="yawning-koala" alt="Yawning Koala" />
 
     <!-- 📦 صندوق العد التنازلي -->
     <div class="launch-box">
-      <h3 id="launch-text">Launching on:</h3>
-      <div class="countdown" id="countdown"></div>
-      <p id="launch-date">15 August – International Relaxation Day</p>
+      <h3>Launching on:</h3>
+      <div id="countdown"></div>
+      <p>15 August – International Relaxation Day</p>
     </div>
-
 
     <!-- 📦 صندوق العقد -->
     <div id="contract-box">
@@ -40,10 +35,10 @@
   <section class="community-section">
     <div class="social-icons">
       <a href="https://x.com/SNOOZERCOIN?s=21" target="_blank">
-        <img src="{{ url_for('static', filename='images/x.png') }}" alt="Twitter" />
+        <img src="{{ url_for('static', filename='images/x.png') }}" alt="Twitter">
       </a>
       <a href="https://t.me/SnoozerCoinz" target="_blank">
-        <img src="{{ url_for('static', filename='images/tt.png') }}" alt="Telegram" />
+        <img src="{{ url_for('static', filename='images/tt.png') }}" alt="Telegram">
       </a>
     </div>
   </section>
@@ -51,30 +46,31 @@
   <!-- 💬 عبارة ترحيبية -->
   <section class="community-tagline">
     <div class="tagline">
-      <h6>Stay lazy...<br>stay winning...</h6>
+      <h4>Stay lazy...<br>stay winning...</h4>
     </div>
   </section>
 
-  
-    <!-- 🔥 زر Claim -->
-<div class="claim-section">
-  <button id="claimButton" disabled>Claim $ZZZ</button>
-  <p class="claim-note">*Available Two Weeks after Launch*</p>
-</div>
+  <!-- 🔥 زر Claim -->
+  <div class="claim-section">
+    <button id="claimButton" disabled>Claim $ZZZ</button>
+    <p class="claim-note">Available Two Weeks after Launch</p>
+  </div>
 
   <!-- 🟣 قسم Tokenomics -->
   <section class="tokenomics-section">
     <div class="chart-container">
-      <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+      <canvas id="tokenomicsChart"></canvas>
     </div>
-
     <div class="tokenomics-text">
       <h1>SNOOZER ($ZZZ)</h1>
       <h2>TOKENOMICS</h2>
       <p><strong>Total Supply:</strong> 1 Billion</p>
       <p><strong>Network:</strong> Solana</p>
-      <p>$ZZZ is built for long-term holders. With 80% allocated to liquidity and the rest to growth, competitions, and meme power, Snoozer is ready to dominate the Solana memecoin scene.</p>
-      
+      <p>
+        $ZZZ is built for long-term holders. With 80% allocated to liquidity
+        and the rest to growth, competitions, and meme power, Snoozer is ready
+        to dominate the Solana memecoin scene.
+      </p>
       <ul class="distribution-list">
         <li><span class="color-box liquidity"></span> Liquidity – 80%</li>
         <li><span class="color-box team"></span> Team – 8%</li>
@@ -86,6 +82,7 @@
     </div>
   </section>
 
+  <!-- 🟣 الفوتر -->
   <footer>
     <p>Stay drowsy, stay cozy. $ZZZ is coming.</p>
   </footer>
