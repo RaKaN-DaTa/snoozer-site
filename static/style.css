@@ -308,3 +308,64 @@ footer p {
   color: gray;
 }
 
+
+/* ✅ تحسين الموقع ليكون متجاوب مع كل الأجهزة */
+@media (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .launch-box {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .yawning-koala {
+        width: 180px;
+    }
+
+    .chart-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tokenomics-text {
+        max-width: 90%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .distribution-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 40px;
+    }
+
+    .launch-box {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    .tagline h4 {
+        font-size: 20px;
+    }
+
+    .chart-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tokenomics-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .distribution-list li {
+        font-size: 12px;
+    }
+}
