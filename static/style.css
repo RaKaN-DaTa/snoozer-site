@@ -310,7 +310,7 @@ footer p {
 
 #tokenomicsChart {
     width: 95% !important;   /* 🔥 تصغير الدائرة */
-    max-width: 420px;        /* 🔥 أقصى عرض */
+    max-width: 920px;        /* 🔥 أقصى عرض */
     margin: 20px auto;          /* 🔥 توسيط */
 }
 
