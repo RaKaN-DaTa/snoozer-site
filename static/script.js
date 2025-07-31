@@ -15,7 +15,7 @@ const countdownFunction = setInterval(() => {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  document.getElementById("countdown").innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
 
   if (distance < 0) {
     clearInterval(countdownFunction);
@@ -35,7 +35,7 @@ document.getElementById("copy-btn").addEventListener("click", () => {
     });
 });
 
-// ✅ رسم الدائرة
+// ✅ رسم الدائرة (Tokenomics)
 const ctx = document.getElementById('tokenomicsChart').getContext('2d');
 
 const tokenomicsChart = new Chart(ctx, {
@@ -61,7 +61,7 @@ const tokenomicsChart = new Chart(ctx, {
       ],
       borderColor: '#1c0030',
       borderWidth: 4,
-      hoverOffset: 20
+      hoverOffset: 15
     }]
   },
   options: {
@@ -71,31 +71,13 @@ const tokenomicsChart = new Chart(ctx, {
       tooltip: {
         callbacks: {
           label: function(context) {
-            return `${context.label}: ${context.parsed}%`;
+            return ${context.label}: ${context.parsed}%;
           }
         }
       }
     }
   }
 });
-
-const config = {
-    type: 'doughnut',
-    data: data,
-    options: {
-        responsive: true,
-        maintainAspectRatio: false, // 🔥 التحكم بالحجم
-        cutout: '65%',
-        layout: {
-            padding: 20 // 🔥 يضيف مساحة حول الدائرة
-        },
-        elements: {
-            arc: {
-                borderWidth: 15 // 🔥 عرض الحدود
-            }
-        }
-    },
-};
 
 // 🔥 تحديد تاريخ الفتح (بعد أسبوعين من 15 أغسطس)
 const unlockDate = new Date("August 29, 2025 00:00:00").getTime();
