@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SnoozerCoin</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- 🐨 كوالا أعلى الموقع -->
+  <!-- 🐨 كوالا -->
   <section class="hero">
     <img src="{{ url_for('static', filename='images/koala-sleep.png') }}" 
          alt="Yawning Koala" 
          class="yawning-koala" />
 
-    <!-- ⏳ العد التنازلي يظهر قبل 20 ثانية -->
+    <!-- ⏳ صندوق العد التنازلي -->
     <div class="launch-box" id="launch-box">
       <h3>Launching on:</h3>
-      <div class="countdown" id="countdown"></div>
+      <div id="countdown"></div>
       <p>15 August – International Relaxation Day</p>
     </div>
 
-    <!-- 📦 صندوق العقد تحت يد الكوالا -->
-    <div id="contract-box">
+    <!-- 📦 صندوق العقد -->
+    <div id="contract-box" class="hidden">
       <h3>CA:</h3>
       <div class="contract-content">
         <span id="contract-address">EXAMPLE123456789TOKENADDRESS</span>
-        <!-- 🔥 أيقونة نسخ بدون صورة (كود زي شات جي بي تي) -->
-        <button id="copy-btn">📋</button>
+        <button id="copy-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="copy icon" />
+        </button>
       </div>
       <div id="copy-msg">Copied!</div>
     </div>
@@ -43,7 +44,6 @@
         <img src="{{ url_for('static', filename='images/tt.png') }}" alt="Telegram" />
       </a>
     </div>
-    <!-- 🔥 نص تحت الأيقونات بحجم أكبر -->
     <div class="tagline">
       <h4>Stay lazy...<br>stay winning...</h4>
     </div>
@@ -55,32 +55,33 @@
     <p class="claim-note">Available Two Weeks after Launch</p>
   </div>
 
-  <!-- 🔍 بحث عن المحفظة -->
+  <!-- 🔎 البحث عن المحفظة -->
   <section class="search-section">
     <div class="search">
       <input type="text" id="walletInput" placeholder="Enter your wallet address">
       <button onclick="checkWallet()">Search</button>
-      <!-- 🎁 صندوق النتيجة ما يظهر إلا بعد البحث + زر إغلاق -->
-      <div id="walletResult" class="result-box" style="display:none;">
-        <button class="close-btn" onclick="closeResult()">✖</button>
-      </div>
+    </div>
+    <div id="walletResult" class="result-box hidden">
+      <button class="close-btn" onclick="closeResult()">✖</button>
+      <h3>Wallet: </h3>
+      <p>🏆 Tokens Won: <strong>0</strong></p>
+      <div class="rank-badge">Rank #0</div>
+      <p></p>
     </div>
   </section>
 
   <!-- 🟣 قسم Tokenomics -->
   <section class="tokenomics-section">
-    <!-- 📊 الدائرة يسار -->
     <div class="chart-container">
-      <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+      <canvas id="tokenomicsChart"></canvas>
     </div>
-    <!-- 📝 الكلام يمين بمحاذاة وعدد سطور قليل -->
     <div class="tokenomics-text">
       <h1>SNOOZER ($ZZZ)</h1>
       <h2>TOKENOMICS</h2>
-      <p><strong>Total Supply:</strong> 1 Billion</p>
+      <p><strong>Total Supply:</strong> 1B</p>
       <p><strong>Network:</strong> Solana</p>
       <p>$ZZZ is built for long-term holders. 80% liquidity + rewards for growth & competitions.</p>
-      <!-- 🔥 توزيع الألوان 3 فوق 3 تحت -->
+      
       <ul class="distribution-list">
         <li><span class="color-box liquidity"></span> Liquidity – 80%</li>
         <li><span class="color-box team"></span> Team – 8%</li>
@@ -93,19 +94,19 @@
   </section>
 
   <footer>
-    <p>Stay drowsy, stay cozy. $ZZZ is coming.</p>
+    <p>Stay drowsy,<br>stay cozy. $ZZZ is coming.</p>
   </footer>
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 
-  <!-- ✨ خلفية النجوم + الشموع -->
+  <!-- 🕯️ الشموع -->
   <div class="candles">
-    <div class="candle" style="left: 10%; width: 4px; height: 25px; animation-delay: 0s;"></div>
-    <div class="candle" style="left: 20%; width: 5px; height: 40px; animation-delay: 2s;"></div>
-    <div class="candle" style="left: 80%; width: 3px; height: 30px; animation-delay: 1s;"></div>
-    <div class="candle" style="left: 90%; width: 6px; height: 50px; animation-delay: 3s;"></div>
-    <div class="candle" style="left: 70%; width: 5px; height: 45px; animation-delay: 1.5s;"></div>
-    <div class="candle" style="left: 5%; width: 4px; height: 35px; animation-delay: 0.5s;"></div>
+    <div class="candle" style="left: 10%;"></div>
+    <div class="candle" style="left: 20%;"></div>
+    <div class="candle" style="left: 80%;"></div>
+    <div class="candle" style="left: 90%;"></div>
+    <div class="candle" style="left: 70%;"></div>
+    <div class="candle" style="left: 5%;"></div>
   </div>
 </body>
 </html>
