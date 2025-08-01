@@ -98,3 +98,74 @@ const checkUnlock = setInterval(() => {
     clearInterval(checkUnlock);
   }
 }, 1000);
+
+// عداد الجوائز
+let totalRewards = 0;
+const target = 50000000;
+const counter = document.getElementById("total-rewards");
+
+const animateCounter = setInterval(() => {
+  if (totalRewards < target) {
+    totalRewards += 100000;
+    counter.textContent = totalRewards.toLocaleString();
+  } else {
+    clearInterval(animateCounter);
+  }
+}, 10);
+
+// التنقل بين الصفحات
+const dashboard = document.getElementById("dashboard");
+const checkScreen = document.getElementById("check-screen");
+
+function showSection(hideEl, showEl) {
+  hideEl.classList.remove("active");
+  showEl.classList.add("active", "fade-slide");
+  setTimeout(() => {
+    showEl.classList.remove("fade-slide");
+  }, 600);
+}
+
+document.getElementById("check-btn").addEventListener("click", () => {
+  showSection(dashboard, checkScreen);
+});
+
+document.getElementById("back-btn").addEventListener("click", () => {
+  showSection(checkScreen, dashboard);
+});
+
+// بيانات الفائزين
+const winners = [
+  { wallet: "wallet1xxx", tokens: 25000, rank: 12 },
+  { wallet: "wallet2yyy", tokens: 100000, rank: 5 }
+];
+
+// البحث وإظهار النتيجة
+document.getElementById("search-btn").addEventListener("click", () => {
+  const input = document.getElementById("wallet-input").value.trim();
+  const resultDiv = document.getElementById("result");
+  const statusMsg = document.getElementById("status-msg");
+  const progressBar = document.getElementById("progress-bar");
+  const progressContainer = document.getElementById("progress-container");
+  const rank = document.getElementById("rank");
+
+  const winner = winners.find(w => w.wallet === input);
+  resultDiv.classList.remove("hidden");
+
+  if (winner) {
+    statusMsg.textContent = 🎉 Congrats! You won ${winner.tokens} $ZZZ;
+    progressContainer.classList.remove("hidden");
+    
+    // تعبئة البار تدريجي
+    progressBar.style.width = "0";
+    setTimeout(() => {
+      progressBar.style.width = ${(winner.tokens / 50000000) * 100}%;
+      progressBar.textContent = ${winner.tokens};
+    }, 100);
+
+    rank.textContent = 🏅 Your rank: #${winner.rank};
+  } else {
+    statusMsg.textContent = "😢 You didn't win this time.";
+    progressContainer.classList.add("hidden");
+    rank.textContent = "Stay active for the next airdrop!";
+  }
+});
