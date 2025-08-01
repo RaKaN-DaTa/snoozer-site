@@ -1,0 +1,207 @@
+/* 🎨 إعدادات أساسية */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: linear-gradient(180deg, #2b1055, #530446);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* ✨ أنيميشن الخلفية */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🐨 الكوالا */
+.yawning-koala {
+  width: 200px;
+  margin-top: 20px;
+  animation: yawn-motion 3s infinite;
+}
+
+@keyframes yawn-motion {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  70% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ⏳ صندوق العد */
+.launch-box, 
+#contract-box {
+  background: linear-gradient(145deg, #511064, #50065ff8);
+  color: rgb(250, 225, 113);
+  padding: 10px;
+  border-radius: 20px;
+  width: 280px;
+  margin: 15px auto;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(44, 43, 43, 0.1);
+}
+
+#contract-address {
+  font-size: 14px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#copy-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+#copy-msg {
+  font-size: 12px;
+  color: #fff;
+  margin-top: 5px;
+  display: none;
+}
+
+#copy-msg.show {
+  display: block;
+}
+
+/* 🌐 السوشيال */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* 💬 العبارة */
+.community-tagline h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+/* 🔥 زر Claim */
+.claim-section {
+  margin-top: 20px;
+}
+
+#claimButton {
+  background: linear-gradient(90deg, #8a5cf6, #7c3aed);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#claimButton.active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.claim-note {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+}
+
+/* 🔍 البحث */
+.search-section {
+  margin-top: 15px;
+}
+
+.search input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  background: linear-gradient(90deg, #8a5cf6, #7c3aed);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.result-box {
+  margin: 15px auto;
+  background: rgba(138, 92, 246, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  max-width: 300px;
+  color: #fff;
+}
+
+.rank-badge {
+  background: linear-gradient(90deg, #8a5cf6, #7c3aed);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* 🟣 Tokenomics */
+.tokenomics-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+  width: 200px;
+  height: 200px;
+}
+
+.tokenomics-text h1, .tokenomics-text h2 {
+  font-size: 16px;
+}
+
+.tokenomics-text p, .distribution-list li {
+  font-size: 13px;
+}
+
+.color-box {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.liquidity { background: #7B68EE; }
+.team { background: #8A2BE2; }
+.marketing { background: #9370DB; }
+.airdrops { background: #BA55D3; }
+.meme { background: #DA70D6; }
+.treasury { background: #D8BFD8; }
+
+/* 📱 الجوال */
+@media (max-width: 768px) {
+  .yawning-koala { width: 150px; }
+  .launch-box, #contract-box { width: 90%; }
+  .social-icons img { width: 60px; height: 60px; }
+  .tokenomics-section { flex-direction: column; }
+}
