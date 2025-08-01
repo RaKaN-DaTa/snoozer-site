@@ -8,6 +8,80 @@ body {
   animation: gradientMove 10s ease infinite;
 }
 
+font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(180deg, #2b1055, #530446);
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+/* الصفحات */
+section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+section.active {
+  display: block;
+  opacity: 1;
+}
+
+/* أزرار */
+button {
+  background: #8a5cf6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Progress Bar */
+#progress-container {
+  width: 80%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 25px;
+  width: 0;
+  background: limegreen;
+  text-align: center;
+  line-height: 25px;
+  color: black;
+  font-weight: bold;
+  transition: width 1s ease;
+}
+
+/* أنيميشن الانتقال */
+.fade-slide {
+  animation: fadeSlide 0.6s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* استجابة للجوال */
+@media (max-width: 768px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  button, input { width: 90%; padding: 10px; }
+}
+
 sleep-icon {
   position: absolute;
   top: 580px;      /* 🔽 نزّلها بحيث تكون فوق الكوالا */
