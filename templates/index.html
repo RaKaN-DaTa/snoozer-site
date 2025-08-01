@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnoozerCoin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- 🐨 الكوالا -->
+  <section class="hero">
+    <img src="{{ url_for('static', filename='images/koala-sleep.png') }}" alt="Yawning Koala" class="yawning-koala" />
+    
+    <!-- ⏳ العد التنازلي -->
+    <div class="launch-box">
+      <h3>Launching on:</h3>
+      <div id="countdown"></div>
+      <p id="launch-date">15 August – International Relaxation Day</p>
+    </div>
+
+    <!-- 📦 صندوق العقد -->
+    <div id="contract-box">
+      <h3>CA:</h3>
+      <div class="contract-content">
+        <span id="contract-address">EXAMPLE123456789TOKENADDRESS</span>
+        <button id="copy-btn"><img src="{{ url_for('static', filename='images/co.png') }}" alt="copy"/></button>
+      </div>
+      <div id="copy-msg">Copied!</div>
+    </div>
+  </section>
+
+  <!-- 🌐 روابط -->
+  <section class="community-section">
+    <div class="social-icons">
+      <a href="https://x.com/SNOOZERCOIN?s=21" target="_blank">
+        <img src="{{ url_for('static', filename='images/x.png') }}" alt="Twitter" />
+      </a>
+      <a href="https://t.me/SnoozerCoinz" target="_blank">
+        <img src="{{ url_for('static', filename='images/tt.png') }}" alt="Telegram" />
+      </a>
+    </div>
+  </section>
+
+  <!-- 💬 العبارة -->
+  <section class="community-tagline">
+    <h2>Stay lazy...<br> stay winning...</h2>
+  </section>
+
+  <!-- 🔥 زر Claim -->
+  <div class="claim-section">
+    <button id="claimButton" disabled>Claim $ZZZ</button>
+    <p class="claim-note">*claim Available Two Weeks after Launch*</p>
+  </div>
+
+  <!-- 🔍 البحث عن المحفظة -->
+  <section class="search-section">
+    <div class="search">
+      <input type="text" id="walletInput" placeholder="Enter your wallet address">
+      <button onclick="checkWallet()">Search</button>
+      <div id="walletResult" class="result-box"></div>
+    </div>
+  </section>
+
+  <!-- 🟣 Tokenomics -->
+  <section class="tokenomics-section">
+    <div class="chart-container">
+      <canvas id="tokenomicsChart"></canvas>
+    </div>
+    <div class="tokenomics-text">
+      <h2>TOKENOMICS</h2>
+      <p><strong>Total Supply:</strong> 1B</p>
+      <p><strong>Network:</strong> Solana</p>
+      <p class="desc">$ZZZ is built for long-term holders. 80% liquidity + rewards for growth & competitions.</p>
+
+      <!-- ✅ توزيع التوكن -->
+      <div class="distribution-grid">
+        <div class="item"><span class="color-box liquidity"></span> Liquidity <br><span class="percent">80%</span></div>
+        <div class="item"><span class="color-box team"></span> Team <br><span class="percent">8%</span></div>
+        <div class="item"><span class="color-box marketing"></span> Marketing <br><span class="percent">5%</span></div>
+        <div class="item"><span class="color-box airdrops"></span> Airdrops <br><span class="percent">5%</span></div>
+        <div class="item"><span class="color-box meme"></span> Meme Fund <br><span class="percent">1%</span></div>
+        <div class="item"><span class="color-box treasury"></span> Treasury <br><span class="percent">1%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Stay drowsy, stay cozy. $ZZZ is coming.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <!-- 🕯️ الشموع -->
+  <div class="candles"></div>
+</body>
+</html>
