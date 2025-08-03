@@ -1,7 +1,8 @@
 {
   "wallets": [
-    { "address": "D9FjLxfFST9Z2hNXXU24rK4k6GS4LT8PSyYfcNn1nq4U", "tokensWon": 10000,"rank":1 },
-    { "address": "D9FjLxfFST9Z2hNXXU24rK4k6GS4LT8PSyYfcNn1nq4U", "tokensWon": 15000,"rank":2 },
-    { "address": "D9FjLxfFST9Z2hNXXU24rK4k6GS4LT8PSyYfcNn1nq4", "tokensWon": 5000,"rank":3 }
+    { "address": "BCN13akrGPsrYY7EzeYDh6QzfttCcDR5HTkPtTwsjpWj", "tokensWon": 50000,"rank":1 },
+    { "address": "CYnBqYZwDKS8nUdu7QPgaoQ8nqMjCfQnNNjE15quyo93", "tokensWon": 50000,"rank":1 },
+    { "address": "c7MArwTUhCcpyGsjGzDHEy5JHLNvkJ1GLikct2jzy2V", "tokensWon": 50000,"rank":1 }
   ]
+
 }
