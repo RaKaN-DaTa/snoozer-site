@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 🕒 عد تنازلي (20 ثانية للتجربة)
-const launchDate = new Date("2025-09-1T00:00:00").getTime();
+const launchDate = new Date("2025-09-01T00:00:00").getTime();
 const countdown = setInterval(() => {
   const now = new Date().getTime();
   const distance = launchDate - now;
@@ -112,5 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function closeResult() {
     document.getElementById("walletResult").style.display = "none";
 }
+
 
 
